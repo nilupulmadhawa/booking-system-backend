@@ -4,9 +4,14 @@
     "description": "Backend",
     "main": "src/app.js",
     "scripts": {
+        "build": "npm run build-babel && npm run copy",
+        "build-babel": "babel -d ./dist ./src -s",
+        "clean": "rm -rf dist && mkdir dist",
+        "copy": "babel src --out-dir ./dist --copy-files",
         "dev": "nodemon --exec babel-node src/app.js",
-        "start": "babel-node src/app.js",
-        "test": "test"
+        "start": "node dist/app.js",
+        "lint": "eslint --ignore-path .gitignore && prettier . --write",
+        "test": "echo test"
     },
     "author": "",
     "license": "ISC",
