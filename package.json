@@ -1,5 +1,5 @@
 {
-    "name": "surge-api",
+    "name": "booking-system-api",
     "version": "1.0.0",
     "description": "Backend",
     "main": "src/app.js",
