@@ -25,9 +25,7 @@ app.use(_express["default"].urlencoded({
   extended: true
 }));
 app.get('/', function (req, res) {
-  return res.status(200).json({
-    message: 'Booking Server Up and Running'
-  });
+  return res.redirect('https://documenter.getpostman.com/view/16708354/2s93CUHq4t');
 });
 app.use('/api', _index["default"]);
 app.use(errors());
